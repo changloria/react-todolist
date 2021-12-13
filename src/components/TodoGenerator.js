@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../style/style.css'
 
 function TodoGenerator(props){
     const [content, setContent] = useState("")
@@ -19,8 +20,8 @@ function TodoGenerator(props){
     return(
         <div>
             <form onSubmit={toSubmit}>
-            <input type="text" value={content} onChange={handleContentValue} required></input>
-            <input type="submit" value="add"></input>
+            <input type="text" value={content} class="input-field" onChange={handleContentValue} required></input>
+            <input type="submit" value="add" class="button"></input>
             </form>
         </div>
     );

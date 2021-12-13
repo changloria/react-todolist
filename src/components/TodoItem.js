@@ -1,7 +1,9 @@
+import "../style/style.css"
+
 
 function TodoItem(props){
     return(
-        <div>{props.content}</div>
+        <div class="todoItemLine">{props.content}</div>
     );
 }
 
