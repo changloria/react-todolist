@@ -1,18 +1,13 @@
 import TodoItem from "./TodoItem";
-import TodoGenerator from "./TodoGenerator";
-import { useState } from "react";
+import { useSelector } from "react-redux";
 
-function TodoGroup(props) {
+function TodoGroup() {
 
-    const [todoList, setTodoList] = useState([]);
-    function updateTodoList(newTodo){
-        setTodoList(oldTodoList=>[...oldTodoList, newTodo])
-    }
+    const todoList = useSelector((state) => state.todoList);
 
     return (
         <div>
-            {todoList.map((item)=><TodoItem key={item} content={item}/>)}
-            <TodoGenerator updateTodoList={updateTodoList}/>
+            {todoList.map((item, index)=><TodoItem key={item.ID} content={item.content} id={item.ID}/>)}
         </div>
     );
 
