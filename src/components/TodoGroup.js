@@ -7,7 +7,7 @@ function TodoGroup() {
 
     return (
         <div>
-            {todoList.map((item, index)=><TodoItem key={item.ID} content={item.content} id={item.ID}/>)}
+            {todoList.map((item, index)=><TodoItem key={item.ID} content={item.Text} id={item.ID} status={item.Done} />)}
         </div>
     );
 

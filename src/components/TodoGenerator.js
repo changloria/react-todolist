@@ -12,7 +12,7 @@ function TodoGenerator(props){
     function toSubmit(event) {
         event.preventDefault();
         dispatch({type: UPDATE_SIZE, payload: 1})
-        dispatch({type: UPDATE_TODO_LIST, payload:{"content": content, "ID":uuidv4(), "done": "false"}})
+        dispatch({type: UPDATE_TODO_LIST, payload:{"Text": content, "ID":uuidv4(), "Done": false}})
         setContent("");
     }
 

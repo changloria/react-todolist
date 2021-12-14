@@ -21,3 +21,18 @@
     margin: auto;
     margin-top: 10px;
   }
+
+  .todo-Item-Content { font-family: 'Inder', sans-serif; 
+    font-size: 25px; 
+    color: #666;
+    text-align: left; 
+}
+
+  .done{
+      text-decoration:line-through;
+  }
+
+  .delete-Button{
+    float: right;
+    border-radius: 6px;
+  }
