@@ -13,7 +13,7 @@ function TodoItem(props){
     function changeStatus(){
         dispatch({type: CHANGE_STATUS, payload: props.id})
     }
-    console.log(props.status);
+    
     return(
         <div className={props.status ? "todo-Item-Line done": "todo-Item-Line"} onClick={changeStatus}>
             {props.content}
