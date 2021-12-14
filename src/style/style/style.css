@@ -1,0 +1,23 @@
+.button{
+    background-color: rgb(72, 182, 255);
+    color: white;
+    border-radius: 3.5px;
+    padding: 5px;
+    width: 55px;
+    height: 30px;
+    margin-left: 5px;
+  }
+  
+  .input-field{
+    margin-top: 10px;
+    border-radius: 3.5px;
+    padding: 5px;
+  }
+  
+  .todo-Item-Line{
+    width: 50%;
+    padding: 5px;
+    border: 1.5px solid black;
+    margin: auto;
+    margin-top: 10px;
+  }
