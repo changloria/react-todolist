@@ -2,7 +2,8 @@ import { useState } from "react";
 import '../style/style.css'
 import { useDispatch } from "react-redux"
 import { UPDATE_SIZE, UPDATE_TODO_LIST } from "../constants/constants";
-import { v4 as uuidv4 } from "uuid";
+import { addTodos } from "../apis/todos";
+import { Button } from 'antd';
 
 
 function TodoGenerator(props){
@@ -11,8 +12,7 @@ function TodoGenerator(props){
 
     function toSubmit(event) {
         event.preventDefault();
-        dispatch({type: UPDATE_SIZE, payload: 1})
-        dispatch({type: UPDATE_TODO_LIST, payload:{"Text": text, "ID":uuidv4(), "Done": false}})
+        dispatch({type: UPDATE_SIZE, payload: 1});
         setText("");
     }
 
@@ -20,11 +20,17 @@ function TodoGenerator(props){
         setText(event.target.value);
     }
 
+    function addToDo(){
+        addTodos({text :text, done: false}).then((response) => {
+            dispatch({type: UPDATE_TODO_LIST, payload: response.data});
+        })
+    }
+
 
     return(
         <form onSubmit={toSubmit}>
-            <input type="text" value={text} className="input-field" onChange={handleContentValue} required></input>
-            <input type="submit" value="add" className="button"></input>
+            <input type="text" value={text} className="input-field" onChange={handleContentValue}></input>
+            <Button value="add" type="primary" onClick={addToDo} >Add</Button>
         </form>
     );
 }

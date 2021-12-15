@@ -1,4 +1,4 @@
-import { CHANGE_STATUS, REMOVE_TODO, UPDATE_SIZE, UPDATE_TODO_LIST } from "../constants/constants";
+import { CHANGE_STATUS, INIT_TODO, REMOVE_TODO, UPDATE_SIZE, UPDATE_TODO_LIST } from "../constants/constants";
 
 
 const initState = {size: 0, todoList: []};
@@ -10,16 +10,18 @@ const TodoReducer = (state = initState, action) => {
         case UPDATE_TODO_LIST:
             return {...state, todoList: [...state.todoList, action.payload]}
         case REMOVE_TODO:
-            return {...state, todoList: state.todoList.filter(content => content.ID !== action.payload)}
+            return {...state, todoList: state.todoList.filter(content => content.id !== action.payload)}
         case CHANGE_STATUS:
             return {...state, todoList: state.todoList.map(function(todo){
-                if(todo.ID === action.payload){
-                    todo.Done = !todo.Done;
+                if(todo.id === action.payload){
+                    todo.done = !todo.done;
                 }
                 
                 return todo;
             })};
-        default:
+        case INIT_TODO:
+            return {...state, todoList: action.payload};
+        default: 
             return state;
     }
 }

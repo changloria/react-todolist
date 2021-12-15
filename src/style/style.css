@@ -20,6 +20,7 @@
     border: 1.5px solid black;
     margin: auto;
     margin-top: 10px;
+    word-break: break-all;
   }
 
   .todo-Item-Content { font-family: 'Inder', sans-serif; 
@@ -35,4 +36,8 @@
   .delete-Button{
     float: right;
     border-radius: 6px;
+  }
+
+  .background {
+    background-image: url("../style/background/background.jpg");
   }
