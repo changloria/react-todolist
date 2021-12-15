@@ -5,22 +5,25 @@ import { REMOVE_TODO, CHANGE_STATUS } from "../constants/constants"
 
 function TodoItem(props){
     const dispatch = useDispatch();
+    const{id, done, text} = props;
 
     function removeTodoList(){
-        dispatch({type: REMOVE_TODO ,payload: props.id})
+        dispatch({type: REMOVE_TODO ,payload: id})
     }
 
     function changeStatus(){
-        dispatch({type: CHANGE_STATUS, payload: props.id})
+        dispatch({type: CHANGE_STATUS, payload: id})
     }
     
     return(
-        <div className={props.status ? "todo-Item-Line done": "todo-Item-Line"} onClick={changeStatus}>
-            {props.content}
+        <div className={done ? "todo-Item-Line done": "todo-Item-Line"} onClick={changeStatus}>
+            {text}
             <button className="delete-Button" onClick={removeTodoList}>x</button>
             
         </div>
     );
+    //<div className={`TodoItem-todo ${todoStatus}`}>
+    //const todoStatus = todo.done ? "done" : "";
 }
 
 export default TodoItem;
