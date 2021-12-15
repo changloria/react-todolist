@@ -22,8 +22,6 @@ function TodoItem(props){
             
         </div>
     );
-    //<div className={`TodoItem-todo ${todoStatus}`}>
-    //const todoStatus = todo.done ? "done" : "";
 }
 
 export default TodoItem;
