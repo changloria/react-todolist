@@ -40,6 +40,7 @@
 .header-List {
   display: inline-block;
   margin-right: 20px;
+  font-size: 1.25em;
 }
 
 li {
@@ -56,16 +57,14 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: rgb(240, 216, 216);
 }
 
 ul {
-  display: flex;
   list-style-type: none;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   overflow: hidden;
-  text-align: center;
   background-color: rgb(255, 204, 204);
 
 }

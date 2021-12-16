@@ -11,7 +11,7 @@ import UndoneList from "./router/UndoneList"
 
 function App() {
   return (
-    <><Router>
+    <Router>
       <div className='App'>
         <nav>
           <ul>
@@ -26,7 +26,6 @@ function App() {
             </li>
           </ul>
         </nav>
-
         <Switch>
           <Route exact path="/">
             <TodoList/>
@@ -39,7 +38,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router></>
+    </Router>
   );
 }
 

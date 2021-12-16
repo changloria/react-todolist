@@ -1,24 +1,28 @@
-.button{
-    background-color: #ce96f1 !important;
-    color: white;
+#add-Button{
+    background-color: #ce96f1;
+    border-color: rgb(235, 219, 231);
+    width: 70px;
+    height: 36px;
+    margin-left: 10px;
   }
   
   .input-field{
     margin-top: 10px;
     border-radius: 3.5px;
     padding: 5px;
+    width: 20%;
+    border-color: #8b0b99;
   }
   
   .todo-Item-Line{
     width: 50%;
     padding: 5px;
-    border: 1.5px solid black;
+    border: 2px solid #bfbdbd;
     margin: auto;
     margin-top: 10px;
     word-break: break-all;
     background-color: white;
-    text-align: center;
-    height: 10%;
+    height: 100%;
   }
 
   .todo-Item-Content { font-family: 'Inder', sans-serif; 
@@ -28,14 +32,35 @@
 }
 
   .done{
-      text-decoration:line-through;
+      text-decoration:line-through 2px solid darkmagenta;
   }
 
-  .delete-Button{
+  #edit-Button:hover{
+    background-color: rgb(207, 252, 237);
+    border-color: black ;
+  }
+
+  #edit-Button{
     float: right;
-    border-radius: 6px;
+    height: 22px;
+    line-height: 0;
+  }
+
+  #delete-Button:hover {
+    background-color: rgb(255, 185, 185);
+    border-color: black ;
+  }
+
+  #delete-Button{
+    float: right;
+    height: 22px;
+    line-height: 0;
   }
 
   .background {
     background-image: url("../style/background/background.jpg");
+  }
+
+  .background-Done-List {
+    background-color: aliceblue;
   }

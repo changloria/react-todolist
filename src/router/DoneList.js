@@ -10,8 +10,8 @@ function DoneList(){
     })
 
     return (
-    <div>
-        <h3>done</h3>
+    <div className="background-Done-List">
+        <h2>done</h2>
         {todoList.filter(item=> item.done).map((item)=>
             <TodoItem key={item.id} id={item.id} text={item.text} done={item.done}></TodoItem>
         )}

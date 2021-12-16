@@ -13,7 +13,6 @@ function TodoList(){
 
     useEffect(()=> {
         getTodos().then((response)=> {
-            console.log("Hello response", response.data);
             dispatch({type: INIT_TODO, payload: response.data})
         });
     });
@@ -22,7 +21,7 @@ function TodoList(){
     return(
         <div className="TodoList background">
             <HomeOutlined/>
-            <h3>Todo List</h3>
+            <h2>Todo List</h2>
             <TodoGenerator/>
             <TodoGroup/>
         </div>

@@ -10,8 +10,8 @@ function UndoneList(){
     })
 
     return (
-    <div>
-        <h3>Undone</h3>
+    <div className="background-Done-List">
+        <h2>Undone</h2>
         {todoList.filter(item=> !item.done).map((item)=>
             <TodoItem key={item.id} id={item.id} text={item.text} done={item.done}></TodoItem>
         )}

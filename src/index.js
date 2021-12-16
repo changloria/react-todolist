@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
 import './index.css';
 import { createStore } from "redux"
 import { Provider } from "react-redux"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import todoReducer from './reducers/TodoReducer';
-import 'antd/dist/antd.css'
 
 const store = createStore( todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
