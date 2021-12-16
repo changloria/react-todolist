@@ -30,7 +30,7 @@ function TodoGenerator(props){
     return(
         <form onSubmit={toSubmit}>
             <input type="text" value={text} className="input-field" onChange={handleContentValue}></input>
-            <Button value="add" type="primary" onClick={addToDo} >Add</Button>
+            <Button value="add" className="button" type="primary" onClick={addToDo} >Add</Button>
         </form>
     );
 }

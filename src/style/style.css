@@ -1,11 +1,6 @@
 .button{
-    background-color: rgb(72, 182, 255);
+    background-color: #ce96f1 !important;
     color: white;
-    border-radius: 3.5px;
-    padding: 5px;
-    width: 55px;
-    height: 30px;
-    margin-left: 5px;
   }
   
   .input-field{
@@ -21,6 +16,9 @@
     margin: auto;
     margin-top: 10px;
     word-break: break-all;
+    background-color: white;
+    text-align: center;
+    height: 10%;
   }
 
   .todo-Item-Content { font-family: 'Inder', sans-serif; 

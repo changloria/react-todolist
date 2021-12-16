@@ -12,11 +12,10 @@ const TodoReducer = (state = initState, action) => {
         case REMOVE_TODO:
             return {...state, todoList: state.todoList.filter(content => content.id !== action.payload)}
         case CHANGE_STATUS:
-            return {...state, todoList: state.todoList.map(function(todo){
-                if(todo.id === action.payload){
-                    todo.done = !todo.done;
+            return{...state, todoList: state.todoList.map(function(todo){
+                if(todo.id === action.payload.id){
+                    return action.payload;
                 }
-                
                 return todo;
             })};
         case INIT_TODO:
