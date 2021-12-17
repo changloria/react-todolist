@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import "../style/style.css"
-import { REMOVE_TODO, CHANGE_STATUS } from "../constants/constants"
+import { REMOVE_TODO, CHANGE_STATUS, HTTP_STATUS_NO_CONTENT } from "../constants/constants"
 import { deleteTodos, updateTodos } from "../apis/todos";
 import { Button } from 'antd';
 import { useState } from "react";
@@ -14,8 +14,9 @@ function TodoItem(props){
     const [modifiedContent, setModifiedContent] = useState("");
 
     function removeTodoList(){
-        deleteTodos(id).then(() => {
-            dispatch({type: REMOVE_TODO, payload: id});
+        deleteTodos(id).then((response) => {
+            if(response.status === HTTP_STATUS_NO_CONTENT)
+                dispatch({type: REMOVE_TODO, payload: id});
         })
     }
 
